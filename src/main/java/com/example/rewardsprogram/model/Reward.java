@@ -6,8 +6,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 public abstract class Reward {
 
-	@JsonInclude  //include in Jackson serialization
-	@Transient    //marking a field as not persistable
+	@JsonInclude
+	@Transient
 	protected Long points;
 
 	public abstract Long getPoints();

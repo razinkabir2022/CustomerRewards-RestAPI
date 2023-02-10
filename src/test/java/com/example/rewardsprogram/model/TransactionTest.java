@@ -4,13 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class MyTransactionTest {
+public class TransactionTest {
 
 	@Test
 	void getPoints() {
-		MyTransaction myTransaction = new MyTransaction();
-		myTransaction.setTotal(120.00);
-		assertEquals(myTransaction.getPoints(), 90);
+		Transaction transaction = new Transaction();
+		transaction.setTotal(120.00);
+		assertEquals(transaction.getPoints(), 90);
 	}
 
 }

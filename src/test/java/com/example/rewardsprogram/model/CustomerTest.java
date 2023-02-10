@@ -4,41 +4,38 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-import org.aspectj.lang.annotation.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CustomerTest {
 
 	private Customer customer;
-	private Set<MyTransaction> transactions;
+	private Set<Transaction> transactions;
 
 	@BeforeEach
 	public void setup() {
 
-		transactions = new HashSet<MyTransaction>();
+		transactions = new HashSet<Transaction>();
 		customer = new Customer();
 		customer.setName("Tom");
 		customer.setId(101);
-		MyTransaction transactions1 = new MyTransaction();
+		Transaction transactions1 = new Transaction();
 		transactions1.setId(101l);
 		transactions1.setDescription("Purchase 1");
 		transactions1.setTotal(120.00);
 		transactions1.getPoints();
 		transactions1.setCustomer(customer);
 		transactions1.setSaveDate(new Date());
-		MyTransaction transactions2 = new MyTransaction();
+		Transaction transactions2 = new Transaction();
 		transactions2.setId(102l);
 		transactions2.setDescription("Purchase 2");
 		transactions2.setTotal(120.00);
 		transactions2.setSaveDate(new Date());
 		transactions2.getPoints();
 		transactions2.setCustomer(customer);
-		MyTransaction transactions3 = new MyTransaction();
+		Transaction transactions3 = new Transaction();
 		transactions3.setId(103l);
 		transactions3.setDescription("Purchase 3");
 		transactions3.setTotal(120.00);
